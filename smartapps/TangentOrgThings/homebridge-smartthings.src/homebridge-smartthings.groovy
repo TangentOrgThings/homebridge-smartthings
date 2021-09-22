@@ -8,20 +8,20 @@ String appVersion()                     { return "2.3.3" }
 String appModified()                    { return "04-28-2020" }
 String branch()                         { return "master" }
 String platform()                       { return "SmartThings" }
-String pluginName()                     { return "${platform()}-v2" }
-String appIconUrl()                     { return "https://raw.githubusercontent.com/tonesto7/homebridge-smartthings-v2/${branch()}/images/hb_tonesto7@2x.png" }
-String getAppImg(imgName, ext=".png")   { return "https://raw.githubusercontent.com/tonesto7/homebridge-smartthings-v2/${branch()}/images/${imgName}${ext}" }
+String pluginName()                     { return "${platform()}-homebridge" }
+String appIconUrl()                     { return "https://raw.githubusercontent.com/TangentOrgThings/homebridge-smartthings/${branch()}/images/hb_TangentOrgThings@2x.png" }
+String getAppImg(imgName, ext=".png")   { return "https://raw.githubusercontent.com/TangentOrgThings/homebridge-smartthings/${branch()}/images/${imgName}${ext}" }
 Map minVersions()                       { return [plugin: 233] }
 
 definition(
-    name: "Homebridge v2",
-    namespace: "tonesto7",
+    name: "Homebridge Smartthings",
+    namespace: "TangentOrgThings",
     author: "Anthony Santilli",
     description: "Provides the API interface between Homebridge (HomeKit) and ${platform()}",
     category: "My Apps",
-    iconUrl:   "https://raw.githubusercontent.com/tonesto7/homebridge-smartthings-v2/master/images/hb_tonesto7@1x.png",
-    iconX2Url: "https://raw.githubusercontent.com/tonesto7/homebridge-smartthings-v2/master/images/hb_tonesto7@2x.png",
-    iconX3Url: "https://raw.githubusercontent.com/tonesto7/homebridge-smartthings-v2/master/images/hb_tonesto7@3x.png",
+    iconUrl:   "https://raw.githubusercontent.com/TangentOrgThings/homebridge-smartthings/master/images/hb_TangentOrgThings@1x.png",
+    iconX2Url: "https://raw.githubusercontent.com/TangentOrgThings/homebridge-smartthings/master/images/hb_TangentOrgThings@2x.png",
+    iconX3Url: "https://raw.githubusercontent.com/TangentOrgThings/homebridge-smartthings/master/images/hb_TangentOrgThings@3x.png",
     oauth: true)
 
 {
@@ -1588,7 +1588,7 @@ private checkVersionData(now = false) { //This reads a JSON file from GitHub wit
 
 private getConfigData() {
     Map params = [
-        uri: "https://raw.githubusercontent.com/tonesto7/homebridge-smartthings-v2/master/appData.json",
+        uri: "https://raw.githubusercontent.com/TangentOrgThings/homebridge-smartthings/master/appData.json",
         contentType: "application/json"
     ]
     def data = getWebData(params, "appData", false)
@@ -1661,7 +1661,7 @@ Integer getDaysSinceUpdated() {
     return 0
 }
 
-String changeLogData() { return getWebData([uri: "https://raw.githubusercontent.com/tonesto7/homebridge-smartthings-v2/master/CHANGELOG-app.md", contentType: "text/plain; charset=UTF-8"], "changelog") }
+String changeLogData() { return getWebData([uri: "https://raw.githubusercontent.com/TangentOrgThings/homebridge-smartthings/master/CHANGELOG-app.md", contentType: "text/plain; charset=UTF-8"], "changelog") }
 Boolean showChgLogOk() { return (state?.isInstalled && (state?.curAppVer != appVersion() || state?.installData?.shownChgLog != true)) }
 def changeLogPage() {
     def execTime = now()

@@ -106,3 +106,4 @@ smartthings_rsa.pub
 logaudit.json
 homebridge-smartthings-v2-logaudit.json
 accessories/cachedAccessories
+*.swp

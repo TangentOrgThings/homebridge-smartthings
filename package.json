@@ -33,7 +33,7 @@
             "git add"
         ]
     },
-    "homepage": "https://github.com/tonesto7/homebridge-smartthings/#readme",
+    "homepage": "https://github.com/TangentOrgThings/homebridge-smartthings/#readme",
     "keywords": [
         "homebridge-plugin",
         "smartthings",
@@ -43,10 +43,6 @@
         "category_hubs",
         "category_lighting"
     ],
-    "funding": {
-        "type": "paypal",
-        "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVFJTG8H86SK8&source=url"
-    },
     "scripts": {
         "test": "eslint .",
         "prettier": "prettier --write src/**/*.js",
@@ -59,9 +55,9 @@
     "license": "ISC",
     "name": "homebridge-smartthings",
     "preferGlobal": true,
-    "repository": "github:https://github.com/tonesto7/homebridge-smartthings",
+    "repository": "github:https://github.com/TangentOrgThings/homebridge-smartthings",
     "bugs": {
-        "url": "http://github.com/tonesto7/homebridge-smartthings/issues"
+        "url": "http://github.com/TangentOrgThings/homebridge-smartthings/issues"
     },
     "version": "2.3.8",
     "snyk": true
